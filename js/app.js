@@ -1,5 +1,5 @@
 /* PLAY FUNCTION */
-var gameNumber=0;
+var gameNumber = 0;
 function play() {
     gameNumber++;
     var box = document.getElementById("box");
@@ -114,20 +114,20 @@ function play() {
                             { left: 20, top: 5 },
                             { left: 30, top: 5 },
                             { left: 40, top: 5 },
-                    
+
                             { left: 50, top: 5 },
                             { left: 60, top: 5 },
                             { left: 70, top: 5 },
                             { left: 80, top: 5 },
                             { left: 90, top: 5 },
-                    
-                    
+
+
                             { left: 0, top: 20 },
                             { left: 10, top: 20 },
                             { left: 20, top: 20 },
                             { left: 30, top: 20 },
                             { left: 40, top: 20 },
-                    
+
                             { left: 50, top: 20 },
                             { left: 60, top: 20 },
                             { left: 70, top: 20 },
@@ -164,15 +164,22 @@ function play() {
     /* KEYBOARD ACTIONS */
     let rocketLeft = 50; //for 50%
     document.addEventListener("keydown", function (e) {
-
-        if (e.keyCode == 39) // rightArrow
-        {
+        // rightArrow
+        if (e.keyCode == 39) {
             rocketLeft += 2;
             box.style.left = rocketLeft + "%";
+            if (box.style.left == "100%") {
+                box.style.left = "0%";
+                rocketLeft = 0;
+            }
         }
         else if (e.keyCode == 37) {
             rocketLeft -= 2;
             box.style.left = rocketLeft + "%";
+            if (box.style.left == "-4%") {
+                box.style.left = "100%";
+                rocketLeft = 100;
+            }
         }
         else if (e.keyCode == 32) // space
         {
