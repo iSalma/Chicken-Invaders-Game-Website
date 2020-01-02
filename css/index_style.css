@@ -1,38 +1,89 @@
 body
 {
-    background-image: url(../images/SpaceBackground.jpg);
+    font-family:'segoe ui bold';
+    background-image:url("../images/bg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
 }
-
-#box
+.weapon
 {
-    width: 10%;
+    position:absolute;
+    left:10px;
+    top:84%;
+    width: auto;
+    transition: left 0.2s 0s;
+}
+.weapon .rocket img
+{
+    width:65px;
+    height: 65px;
+}
+.weapon .bullet
+{
+    position: relative;
+    top:-6px;
+    left:0;
+    margin: auto;
+    height: 30px;
+    width: 20px;
+    transition:opacity 0s 0s;
+}
+.weapon .bullet img
+{
+    width: 20px;
+    height: 30px;
+}
+#chicken
+{
     position: absolute;
-    left: 50%;
-    bottom: 0;
+    top:30px;
+    left:0px;
+    transition:top;
 }
-#rocket
-{
-    width: 30%;
-}
-#bullets
-{
-    width: 100%;
-}
-
-.bullet{
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-}
-
-
-#bullets img
-{
-    width: 2%;
-}
-
 #chicken img
 {
-    position: absolute;
-    width: 5% ;
+    width:100px;
+    height:100px;
+}
+.GameOver
+{
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    opacity: 0.4;
+    transition: opacity 0s 0s;
+}
+@media screen and (max-width: 945px) and (min-width: 767px)
+{
+#chicken img
+{
+    width:85px;
+    height:85px;
+}
+.weapon .rocket img
+{
+    width:55px;
+    height: 55px;
+}
+}
+@media screen and (max-width: 500px)
+{
+    .GameOver
+{
+    font-size: 3rem;
+}
+#chicken img
+{
+    width:60px;
+    height:60px;
+}
+.weapon .rocket img
+{
+    width:50px;
+    height: 50px;
+}
+.weapon .bullet img
+{
+    height: 20px;
+}
 }
