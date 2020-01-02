@@ -1,0 +1,38 @@
+body
+{
+    background-image: url(../images/SpaceBackground.jpg);
+}
+
+#box
+{
+    width: 10%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+#rocket
+{
+    width: 30%;
+}
+#bullets
+{
+    width: 100%;
+}
+
+.bullet{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+}
+
+
+#bullets img
+{
+    width: 2%;
+}
+
+#chicken img
+{
+    position: absolute;
+    width: 5% ;
+}
