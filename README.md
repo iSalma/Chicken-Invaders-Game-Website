@@ -3,6 +3,15 @@
 </p>
 
 # Chicken Invader Game Website
-Game build by Java Script.
+- Shoot chicken before it reaches the rocket.
+- It has 2 levels, if you finished the first level the chicken will be duplicated.
+- There is "Play Again" option.
+- It shows your score.
 # Visit
 Click [here](https://isalma.github.io/Chicken-Invaders-Game-Website/) to go to the website.
+# Using
+- HTML5
+- CSS3
+- Bootstrap4
+- Java Script
+
