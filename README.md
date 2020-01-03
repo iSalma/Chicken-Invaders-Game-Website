@@ -1,3 +1,7 @@
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+!<img  src = /images/chickenInvader.png>  |  !<img  src = /images/chickenInvader.png>
+
 <p align="center">
 <img  src = /images/chickenInvader.png>
 </p>
