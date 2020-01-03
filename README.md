@@ -1,6 +1,6 @@
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-!<img  src = /images/chickenInvader.png>  |  !<img  src = /images/chickenInvader.png>
+Level 1                    |  Level 2              |   Game Over and Play Again Button | You Win and Play Again Button  
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+!<img  src = /images/chickenInvader.png>  |  !<img  src = /images/chickenInvader.png> | !<img  src = /images/chickenInvader.png> | <img  src = /images/chickenInvader.png>
 
 <p align="center">
 <img  src = /images/chickenInvader.png>
