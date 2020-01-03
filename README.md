@@ -1,6 +1,6 @@
 Level 1                    |  Level 2              |   Game Over and Play Again Button | You Win and Play Again Button  
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-!<img  src = /images/chickenInvader.png>  |  !<img  src = /images/chickenInvader.png> | !<img  src = /images/chickenInvader.png> | <img  src = /images/chickenInvader.png>
+<img  src = /images/chickenInvader.png>  |  <img  src = /images/leve2.png> | <img  src = /images/gameover.png> | <img  src = /images/youwin.png>
 
 <p align="center">
 <img  src = /images/chickenInvader.png>
