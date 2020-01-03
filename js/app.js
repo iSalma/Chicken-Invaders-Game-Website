@@ -141,6 +141,7 @@ function play() {
                 { left: 90, top: 20 }
             );
             gameNumber++;
+            bullets= [];
             gameLoop();
         }
         else if (score == 30) {
