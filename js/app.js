@@ -78,6 +78,9 @@ function play() {
     function moveBullet() {
         for (let i = 0; i < bullets.length; i++) {
             bullets[i].bottom += 20;
+            if (bullets[i].bottom > 100) {
+                bullets.splice(i, 1); /**Remove bullet if it exceeds the screen */
+            }
         }
     }
     /** END BULLET MOTION */
@@ -85,8 +88,9 @@ function play() {
     /* BULLET HIT  AND WIN CONDITION*/
     var score = 0;
     function hit() {
-        let bul, bulTop, bulLeft, chick, chickTop, chickLeft, chickW;
+        let bul, bulTop, bulLeft, chick, chickTop, chickLeft, chickW, chickH;
         chickW = $(".chick").width();
+        chickH = $(".chick").height();
 
         for (let i = chickenArray.length - 1; i >= 0; i--) {
             for (let k = 0; k < bullets.length; k++) {
@@ -97,8 +101,9 @@ function play() {
                 chick = document.querySelectorAll(".chick");
                 chickTop = parseInt(chick[i].getBoundingClientRect().top);
                 chickLeft = parseInt(chick[i].getBoundingClientRect().left);
-
+                /**Conditions if the bullet reached the chicken -> remove chicken and the bullet */
                 if ((bulTop >= chickTop) &&
+                    (bulTop <= chickTop + chickH + 70) && /**70 is random number to hit at the end of the chicken not over it */
                     (bulLeft >= chickLeft) &&
                     (bulLeft <= chickLeft + chickW)
                 ) {
@@ -141,7 +146,7 @@ function play() {
                 { left: 90, top: 20 }
             );
             gameNumber++;
-            bullets= [];
+            bullets = [];
             gameLoop();
         }
         else if (score == 30) {
@@ -198,9 +203,8 @@ function play() {
     })
     /* END KEYBOARD ACTIONS */
 }
-
+play(); /**CALL PLAY */
 /* END PLAY FUNCTION */
-play();
 
 /**PLAY AGAIN */
 function playAgain() {
