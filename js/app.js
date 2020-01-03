@@ -192,7 +192,7 @@ function play() {
             document.getElementById("bulletAudio").play();
             bullets.push({
                 left: box.style.left,
-                bottom: 0
+                bottom: 20
             })
         }
     })
