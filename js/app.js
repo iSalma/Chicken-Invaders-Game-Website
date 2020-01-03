@@ -103,7 +103,7 @@ function play() {
                 chickLeft = parseInt(chick[i].getBoundingClientRect().left);
                 /**Conditions if the bullet reached the chicken -> remove chicken and the bullet */
                 if ((bulTop >= chickTop) &&
-                    (bulTop <= chickTop + chickH + 70) && /**70 is random number to hit at the end of the chicken not over it */
+                    (bulTop <= chickTop + chickH + 100) && /**70 is random number to hit at the end of the chicken not over it */
                     (bulLeft >= chickLeft) &&
                     (bulLeft <= chickLeft + chickW)
                 ) {
@@ -120,6 +120,7 @@ function play() {
     /**WINNING FUNCTION AND LEVEL 2 GAME */
     function win() {
         if (score == 10 && gameNumber == 1) {
+            chickenArray = []; /**it should be empty but in case */
             chickenArray.push(
                 { left: 0, top: 5 },
                 { left: 10, top: 5 },
@@ -193,7 +194,7 @@ function play() {
             }
         }
         else if (e.keyCode == 32) // space
-        {
+        {   
             document.getElementById("bulletAudio").play();
             bullets.push({
                 left: box.style.left,
