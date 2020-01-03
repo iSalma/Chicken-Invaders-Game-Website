@@ -7,6 +7,7 @@ Level 1                    |  Level 2              |   Game Over and Play Again 
 </p> -->
 
 # Chicken Invader Game Website
+- Move the rocket by right-arrow/left-arrow and press space-bar to shoot.
 - Shoot chicken before it reaches the rocket.
 - It has 2 levels, if you finished the first level the chicken will be duplicated.
 - There is "Play Again" option.
