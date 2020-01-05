@@ -56,7 +56,6 @@ function play() {
             if (chickTop >= rockTop - rockH) {
                 clearTimeout(gOver);
                 box.style.left = 50 + "%"; /**RESET ROCKET POSITION */
-                chickenArray = [];
                 bullets = []; /** RETART BULLET ARRAY*/
                 document.getElementById("gameOver").classList.remove("d-none");
                 document.getElementById("gameOver").classList.add("d-flex", "justify-content-center", "align-items-center");
