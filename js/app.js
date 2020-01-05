@@ -49,15 +49,17 @@ function play() {
         var rockH = $("#rocket").height();
         var chick, chickTop;
         for (let i = 0; i < chickenArray.length; i++) {
-            chickenArray[i].top += 1;
+            chickenArray[i].top += 0.1;
             chick = document.querySelectorAll(".chick");
             chickTop = parseInt(chick[i].getBoundingClientRect().top);
             /**If top of chicken reached the rocket game is over */
             if (chickTop >= rockTop - rockH) {
                 clearTimeout(gOver);
+                box.style.left = 50 + "%"; /**RESET ROCKET POSITION */
+                chickenArray = [];
+                bullets = []; /** RETART BULLET ARRAY*/
                 document.getElementById("gameOver").classList.remove("d-none");
                 document.getElementById("gameOver").classList.add("d-flex", "justify-content-center", "align-items-center");
-                box.style.left = 50 + "%"; /**RESET ROCKET POSITION */
             }
         }
     }
@@ -77,7 +79,7 @@ function play() {
     /**BULLET MOTION */
     function moveBullet() {
         for (let i = 0; i < bullets.length; i++) {
-            bullets[i].bottom += 20;
+            bullets[i].bottom += 2.5;
             if (bullets[i].bottom > 100) {
                 bullets.splice(i, 1); /**Remove bullet if it exceeds the screen */
             }
@@ -152,9 +154,11 @@ function play() {
         }
         else if (score == 30) {
             clearTimeout(gOver);
+            box.style.left = 50 + "%"; /**RESET ROCKET POSITION */
+            chickenArray = [];
+            bullets = []; /** RETART BULLET ARRAY*/
             document.getElementById("winner").classList.remove("d-none");
             document.getElementById("winner").classList.add("d-flex", "justify-content-center", "align-items-center");
-            box.style.left = 50 + "%"; /**RESET ROCKET POSITION */
         }
     }
     /** END WINNING FUNCTION AND LEVEL 2 GAME */
@@ -162,7 +166,7 @@ function play() {
     /* GAME LOOP */
     var gOver;
     function gameLoop() {
-        gOver = setTimeout(gameLoop, 700);
+        gOver = setTimeout(gameLoop, 70);
         chickenRow();
         moveChicken();
         bulletsRow();
@@ -215,7 +219,6 @@ function playAgain() {
     document.getElementById("winner").classList.add("d-none");
     document.getElementById("winner").classList.remove("d-flex", "justify-content-center", "align-items-center");
     gameNumber = 0;
-    bullets = []; /** RETART BULLET ARRAY*/
     play();
 }
 /**END PLAY AGAIN */
